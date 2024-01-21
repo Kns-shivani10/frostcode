@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaukriMatch</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 40px;
+        }
+
+        .login-signup {
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 10px;
+            border: 1px solid #ecf0f1;
+            border-radius: 5px;
+        }
+
+        .home-page {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .panel {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .panel:hover {
+            transform: scale(1.05);
+        }
+
+        .panel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .panel-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border: 2px solid #3498db;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="images/naukrimatch_logo.png" alt="NaukriMatch Logo"></a>
+        </div>
+        <a href="#" class="login-signup">Login / Signup</a>
+    </header>
+
+    <div class="home-page">
+        <div class="panel" onclick="navigateTo('Health.html')">
+            <img src="images/health-services.jpg" alt="Health Services">
+            <div class="panel-title">Health Services</div>
+        </div>
+        <div class="panel" onclick="navigateTo('chef.html')">
+            <img src="images/chef-services.jpg" alt="Chef Services">
+            <div class="panel-title">Chef</div>
+        </div>
+        <div class="panel" onclick="navigateTo('maid.html')">
+            <img src="images/maid-services.jpg" alt="Maid and Domestic Services">
+            <div class="panel-title">Maid & Domestic</div>
+        </div>
+        <div class="panel" onclick="navigateTo('tutors.html')">
+            <img src="images/tutors-trainings.jpg" alt="Tutors and Trainings">
+            <div class="panel-title">Tutors & Trainings</div>
+        </div>
+    </div>
+
+    <a href="#" class="back-link" onclick="goBack()">Back</a>
+
+    <script>
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+
+</html>
